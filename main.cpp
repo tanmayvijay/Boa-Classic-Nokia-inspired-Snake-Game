@@ -12,7 +12,7 @@
 
 
 // function to move the cursor to specific locations before printing
-void go_to_xy(int x, int y)
+void set_cursor_position(int x, int y)
 {
  COORD position;
  HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -23,7 +23,7 @@ void go_to_xy(int x, int y)
 
 
 // setting color of objects appearing on screen before printing them
-void objects_color(int fg_color){ // fg_color = foreground color
+void set_console_color(int fg_color){ // fg_color = foreground color
 	HANDLE handle;
 	handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	
@@ -45,7 +45,7 @@ void make_frame(){
 	system("title Boa - Classic Nokia Style Snake Game"); // setting title
 	
 	//printing top edge
-	objects_color(4);
+	set_console_color(4);
 	printf("\n   %c", 218);
 	for(int x=0;x<112;x++)
 		printf("%c",196);
@@ -53,9 +53,9 @@ void make_frame(){
 	
 	//printing left and right edges
 	for(int x=0;x<33;x++){
-		go_to_xy(3,x+2);
+		set_cursor_position(3,x+2);
 		printf("%c",179);
-		go_to_xy(116,x+2);
+		set_cursor_position(116,x+2);
 		printf("%c ",179);
 	}
 	
@@ -66,15 +66,15 @@ void make_frame(){
 	printf("%c  ", 217);
 	
 	// displaying score
-	go_to_xy(5,37);
+	set_cursor_position(5,37);
 	printf("Score: ");
-	go_to_xy(5,38);
+	set_cursor_position(5,38);
 	printf("Highscore: ");
 	
 	// displaying instructions
-	go_to_xy(72,37);
+	set_cursor_position(72,37);
 	printf("Toggle Play/Pause - Spacebar");
-	go_to_xy(72,38);
+	set_cursor_position(72,38);
 	printf("Quit - Q");
 }
 
@@ -82,7 +82,7 @@ void make_frame(){
 
 //function to display current score
 void show_score(int score){
-	go_to_xy(11,37);
+	set_cursor_position(11,37);
 	printf("%4d",score*10);
 }
 
@@ -90,7 +90,7 @@ void show_score(int score){
 
 // function to display 'best' highscore
 void show_highscore(int highscore){
-	go_to_xy(15,38);
+	set_cursor_position(15,38);
 	printf("%4d",highscore*10);
 }
 
@@ -110,7 +110,7 @@ int main(){
 			// clearing the frame on every restart
 			for(int j=4;j<116;j++)
 				for(int k=2;k<35;k++){
-					go_to_xy(j,k);
+					set_cursor_position(j,k);
 					printf(" ");
 				}
 				
@@ -128,9 +128,9 @@ int main(){
 			}
 			
 			// printing the snake
-			objects_color(12);
+			set_console_color(12);
 			for(i=0;i<snake_length;i++){
-				go_to_xy(x_snake[i],y_snake[i]);
+				set_cursor_position(x_snake[i],y_snake[i]);
 				printf("%c", 254);
 			}
 			
@@ -153,10 +153,10 @@ int main(){
 			}
 			
 			// printing the food object at location
-			go_to_xy(x_food,y_food);
-			objects_color(6);
+			set_cursor_position(x_food,y_food);
+			set_console_color(6);
 			printf("%c", 220);
-			objects_color(12);
+			set_console_color(12);
 			
 			restart=0; // resetting restart variable to mark that game is
 						// continuously running
@@ -183,10 +183,10 @@ int main(){
 				}
 				
 				// print the food
-				go_to_xy(x_food,y_food);
-				objects_color(6);
+				set_cursor_position(x_food,y_food);
+				set_console_color(6);
 				printf("%c", 220);
-				objects_color(12);
+				set_console_color(12);
 				
 				// snake eats --> gets bigger
 				snake_length+=2;
@@ -199,7 +199,7 @@ int main(){
 			} // end if (snake eats)
 			
 			
-			go_to_xy(x_snake[snake_length-1],y_snake[snake_length-1]); // go to snake tail
+			set_cursor_position(x_snake[snake_length-1],y_snake[snake_length-1]); // go to snake tail
 														// before updating it
 			
 			// move snake body forward
@@ -238,24 +238,24 @@ int main(){
 				printf(" "); // remove tail
 				
 				//print new head
-				go_to_xy(x_snake[0],y_snake[0]);
+				set_cursor_position(x_snake[0],y_snake[0]);
 				printf("%c", 178);
 				
 				// change old head position to body (other body parts remain same 
 				// (except head, part nexrt to head and tail) )
-				go_to_xy(x_snake[1],y_snake[1]);
+				set_cursor_position(x_snake[1],y_snake[1]);
 				printf("%c", 254);	
 			}
 			// if snake is dead
 			else{
-				objects_color(7); // make it white
+				set_console_color(7); // make it white
 				printf("%c", 254); // tail
-				go_to_xy(x_snake[1],y_snake[1]); // head (showing it at its prev position only,
+				set_cursor_position(x_snake[1],y_snake[1]); // head (showing it at its prev position only,
 				printf("%c", 178); // ie position before hitting)
 				
 				// make rest of the snake white
 				for(i=2;i<snake_length;i++){
-					go_to_xy(x_snake[i],y_snake[i]);
+					set_cursor_position(x_snake[i],y_snake[i]);
 					printf("%c", 254);
 				}
 				
