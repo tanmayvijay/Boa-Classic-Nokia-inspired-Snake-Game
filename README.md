@@ -10,17 +10,17 @@ The snake game is quite popular among people, especially 90's kids.
 2. Run main.exe
   
 #### Game Controls:
-* **Right Arrow Key :** to turn the snake right.
-* **Left Arrow Key :** to turn the snake left.
-* **Up Arrow Key :**  to turn the snake up.
-* **Down Arrow Key :** to turn the snake down.
+* **Right Arrow Key** - to turn the snake right.
+* **Left Arrow Key** - to turn the snake left.
+* **Up Arrow Keyn** - to turn the snake up.
+* **Down Arrow Key** - to turn the snake down.
 <b>
 
 ### Files Description:
-* *main.cpp* : contains the source code (thoroughly explained through comments)
-* *main.o* : object code
-* *main.exe* : executable file for game
-* *makefile.win* : make file used to build the game and track version changes
+* *main.cpp* - contains the source code (thoroughly explained through comments)
+* *main.o* - object code
+* *main.exe* - executable file for game
+* *makefile.win* - make file used to build the game and track version changes
 <b>
 
 ### Libraries Used:
