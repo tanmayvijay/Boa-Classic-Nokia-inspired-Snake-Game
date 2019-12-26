@@ -282,7 +282,7 @@ int main(){
 						exit(0);
 			case ' ' :	while(true){ // if key=' ' --> pause
 							char z=getch();
-							if(z=='Q')
+							if(z=='q')
 								return 0;
 							if(z==' ')
 								break;
