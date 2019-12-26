@@ -10,38 +10,37 @@ The snake game is quite popular among people, especially 90's kids.
 2. Run main.exe
   
 #### Game Controls:
-. Right Arrow Key : to turn the snake right.
-. Left Arrow Key : to turn the snake left.
-. Up Arrow Key :  to turn the snake up.
-. Down Arrow Key : to turn the snake down.
+* **Right Arrow Key :** to turn the snake right.
+* **Left Arrow Key :** to turn the snake left.
+* **Up Arrow Key :**  to turn the snake up.
+* **Down Arrow Key :** to turn the snake down.
 <b>
 
 ### Files Description:
-. main.cpp : contains the source code (thoroughly explained through comments)
-. main.o : object code
-. main.exe : executable file for game
-. makefile.win : make file used to build the game and track version changes
+* *main.cpp* : contains the source code (thoroughly explained through comments)
+* *main.o* : object code
+* *main.exe* : executable file for game
+* *makefile.win* : make file used to build the game and track version changes
 <b>
 
 ### Libraries Used:
-stdio.h - for outputting to screen (printf() ).
-conio.h - for listening for keys pressed.
-time.h - for generating random numbers.
-windows.h - for laying out game windows.
+* *stdio.h* - for outputting to screen (printf() ).
+* *conio.h* - for listening for keys pressed.
+* *time.h* - for generating random numbers.
+* *windows.h* - for laying out game windows.
 <b>
   
 ### Code Description:
 #### Functions: - Details of code are thoruoughly described in comments with the code itself.
-. void set_cursor_position(int x, int y) - to change position of cursor for outputting text.
-. void set_console_color(int fg_color) - to change text color at various points
-. void make_frame() - to create the initial frame, set no of columns, rows and show instructions.
-. void show_score(int score) - to update score on screen.
-. void show_highscore(int highscore) - to update highscore on screnn.
-. int main() - main activity handler - to run the game loops.
-
+* *void set_cursor_position(int x, int y)* - to change position of cursor for outputting text.
+* *void set_console_color(int fg_color)* - to change text color at various points
+* *void make_frame()* - to create the initial frame, set no of columns, rows and show instructions.
+* *void show_score(int score)* - to update score on screen.
+* *void show_highscore(int highscore)* - to update highscore on screnn.
+* *int main()* - main activity handler - to run the game loops.
 <b>
 
-## Thanks for viewing my project.
+## *Thanks for viewing my project.*
 #### This project taught me many general window handling skills (eg - Geometry of windows). The biggest challenge with the project was to make the snake move (head + body + tail). This part of code required lot of efforts figuring out the geometry of window had how to change positions on interval basis.
 ##### Hope you like the efforts.
 
