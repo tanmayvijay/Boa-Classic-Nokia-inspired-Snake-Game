@@ -46,3 +46,6 @@ The snake game is quite popular among people, especially 90's kids.
 
 Here's a snapshot of the game:
 ![alt text](https://github.com/tanmayvijay/Boa-Classic-Nokia-inspired-Snake-Game/blob/master/Boa%20-%20image.png)
+<b><b>
+  
+Thank You. :)
