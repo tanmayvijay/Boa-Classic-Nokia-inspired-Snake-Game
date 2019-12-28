@@ -12,7 +12,7 @@ The snake game is quite popular among people, especially 90's kids.
 #### Game Controls:
 * **Right Arrow Key** - to turn the snake right.
 * **Left Arrow Key** - to turn the snake left.
-* **Up Arrow Keyn** - to turn the snake up.
+* **Up Arrow Key** - to turn the snake up.
 * **Down Arrow Key** - to turn the snake down.
 <b>
 
@@ -41,7 +41,7 @@ The snake game is quite popular among people, especially 90's kids.
 <b>
 
 ## *Thanks for viewing my project.*
-#### This project taught me many general window handling skills (eg - Geometry of windows). The biggest challenge with the project was to make the snake move (head + body + tail). This part of code required lot of efforts figuring out the geometry of window had how to change positions on interval basis.
+#### This project taught me many general window handling skills (eg - Geometry of windows). The biggest challenge with the project was to make the snake move (head + body + tail). This part of code required lot of efforts figuring out the geometry of window and how to change positions on interval basis.
 ##### Hope you like the efforts.
 
 Here's a snapshot of the game:
